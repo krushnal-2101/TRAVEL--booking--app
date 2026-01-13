@@ -1,6 +1,6 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router ";
-import Layout from "./routes/Layout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./routs/Layout";
 import Home from"./componets/Home";
 import { Container, Row, Col } from "react-bootstrap"
 
