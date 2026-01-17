@@ -1,38 +1,38 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./routs/Layout";
-import Home from"./componets/Home";
-import { Container, Row, Col } from "react-bootstrap"
+import Home from "./componets/ui/Home";
+import { Container, Row, Col } from "react-bootstrap";
+import TripsDetail from "./componets/pages/TripsDetail";
+// import TripsData from "./data/TripsData"
+
 
 const App = () => {
   const router = createBrowserRouter([
-{ 
-    path: "/",
-    element:<Layout/>,
-    children:[
-      {
-        path:"/",
-        element:<Home/>
+    {
+      path: "/",
+      element: <Layout />,          
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          // path: "trips",
+          // element: <TripsData/>,
+        },
+       { path:"trips/:id",
+        element:<TripsDetail/>
       }
-    ]
-
-}      
+      ],
+    },
   ]);
 
-  
   return (
-   <>
-   <Container fluid>
-      <Row>
-        <Col>
-          <RouterProvider router={router}> 
-              
-           </RouterProvider>
-        </Col>
-      </Row>
-   </Container>
-   </>
-  )
-}
+    <>
+      <RouterProvider router={router}></RouterProvider>
+    </>
+  );
+};
 
-export default App
+export default App;
