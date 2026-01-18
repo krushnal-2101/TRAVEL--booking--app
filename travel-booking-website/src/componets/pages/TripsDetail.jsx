@@ -16,14 +16,14 @@ const TripsDetail = () => {
   const { id } = useParams();
   const navigate = useNavigation();
 
-  const trip = trips.find((t) => t.id === Number(id));
+  const trip = trips.find((t) => t.id === Number(id))
 
   if (!trip) {
     return (
       <Container>
         <h3>Trips not found </h3>
         <button variant="secondary" onClick={() => navigate(-1)}>
-          Back to Trips{" "}
+          Back to Trips
         </button>
       </Container>
     );

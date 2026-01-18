@@ -4,7 +4,7 @@ import Layout from "./routs/Layout";
 import Home from "./componets/ui/Home";
 import { Container, Row, Col } from "react-bootstrap";
 import TripsDetail from "./componets/pages/TripsDetail";
-// import TripsData from "./data/TripsData"
+import TripsData from "./componets/pages/Trips";
 
 
 const App = () => {
@@ -12,14 +12,14 @@ const App = () => {
     {
       path: "/",
       element: <Layout />,          
-      children: [
+      children: [ 
         {
-          path: "/",
+          index:true,
           element: <Home />,
         },
         {
-          // path: "trips",
-          // element: <TripsData/>,
+          path: "trips",
+          element: <TripsData/>,
         },
        { path:"trips/:id",
         element:<TripsDetail/>
