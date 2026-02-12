@@ -1,69 +1,106 @@
-# 🌍 Travelia - Travel Booking App
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b07cb649-aa64-416a-9305-ac47ecb4e95d" />
 
-Travelia is a modern travel booking web application built with **React.js** and **Firebase**. Users can explore trips, view details, book packages, and manage their bookings easily.
 
----
+✈️ Travelia – Travel Booking App (React + Firebase)
 
-## 🚀 Features
+Travelia is a modern travel booking web app built with React (Vite) and Firebase.
+Users can browse trips, login/signup, and explore destinations.
 
-- 🏝️ Browse travel destinations
-- 📄 View trip details
-- 📝 Book trips online
-- 🔐 User authentication (Login/Register)
-- 📊 Store bookings in Firebase
-- 💰 Dynamic price calculation
-- 📱 Responsive design
+🚀 Features
 
----
+🔐 Firebase Authentication (Login / Signup)
 
-## 🛠️ Tech Stack
+🧭 Protected Routes
 
-- **Frontend:** React.js
-- **Backend:** Firebase (Firestore + Auth)
-- **UI:** Bootstrap / Custom CSS
-- **Hosting:** Netlify / Vercel
+🏝️ Trips listing page
 
----
+🎨 Responsive UI with Bootstrap
 
-## 📂 Project Structure
+⚡ Fast build using Vite
 
-Travel-Booking-App/
-<br/>
+🔥 Firebase integration
+
+🛠️ Tech Stack
+
+React JS (Vite)
+
+Firebase
+
+React Router DOM
+
+Bootstrap
+
+CSS
+
+📂 Folder Structure
+travel-booking-app/
 │
-<br/>
 ├── public/
-<br/>
 ├── src/
-<br/>
-│ ├── assets/
-<br/>
-│ ├── auth/
-<br/>
-│ ├── components/
-<br/>
-│ │ └── pages/
-<br/>
-│ ├── context/
-<br/>
-│ ├── data/
-<br/>
-│ ├── Firebase/
-<br/>
-│ ├── routes/
-<br/>
-│ ├── App.jsx
-<br/>
-│ └── main.jsx
-<br/>
+│   ├── assets/
+│   ├── auth/
+│   │   └── Auth.jsx
+│   ├── Components/
+│   ├── Pages/
+│   ├── Routes/
+│   │   ├── Layout.jsx
+│   │   └── ProtectedRoute.jsx
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   ├── Firebase/
+│   │   └── config.js
+│   ├── App.jsx
+│   ├── main.jsx
 │
-<br/>
 ├── package.json
-<br/>
-├── README.md
-<br/>
-└── index.html
-<br/>
+└── README.md
+⚙️ Installation
+1️⃣ Clone Repository
+git clone https://github.com/your-username/travelia.git
+cd travelia
+2️⃣ Install Dependencies
+npm install
+3️⃣ Run Project
+npm run dev
 
----
-🙋‍♂️ Author
-Amit Dabhi
+App runs on:
+
+http://localhost:5173
+🔥 Firebase Setup
+
+Create a Firebase project and add config in:
+
+src/Firebase/config.js
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_DOMAIN",
+  projectId: "YOUR_ID",
+  storageBucket: "YOUR_BUCKET",
+  messagingSenderId: "YOUR_ID",
+  appId: "YOUR_APP_ID"
+};
+
+export const app = initializeApp(firebaseConfig);
+🔐 Login Credentials (Demo)
+
+You can register new users from signup page.
+
+📸 Screenshots
+
+Home Page
+
+Trips Page
+
+Login Page
+
+(Add screenshots here)
+
+🧑‍💻 Author
+
+Krushnal Bhatti
+
+📜 License
+
+This project is for educational purpose.
